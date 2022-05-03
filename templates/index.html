@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block navbar %}
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="{{ url_for('about_page') }}">About</a></li>
+{% endblock %}
+
+{% block content %}
+    <section id="intro">
+        <p class="name">Hi, my name is <span>Jose Rojas.</span></p>
+        <h2>I develop front end websites.</h2>
+        <p>I'm a student specializing in web development.<p>
+        <p>Currently, I'm doing
+        <a href="https://frontendmasters.com/">front end
+            master courses</a>.</p>
+    </section>
+    <div class="gradient"></div>
+    <div class="section-eclipse">
+        <section id="projects">
+            <h2>Projects I'm proud of</h2>
+            <article class="alt">
+                <div class="text">
+                    <h4>Latest Project </h4>
+                    <h3>JS Calculator</h3>
+                    <p class="blackbox">Description of the project. This is quite simple javascript project made with html and css but even with it
+                        being "simple" I'm proud of it as it is my first "useful" project. For this project I used css and css's flexbox to make it look like
+                        the ios calculator and event listeners from javascript to make the buttons work. Link to
+                        <a href="https://github.com/joseyx/FEM-calculator">github repo</a></p>
+                    <h4>Technologies used include:</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <img src="images/calculator.png" alt="calculator project image." />
+            </article>
+            <article>
+                <div class="text">
+                    <h4>Front end master's project</h4>
+                    <h3>My Own Portafolio</h3>
+                    <p class="blackbox">Description of the project. This project is this website itself. It's made entirely with html and css.
+                        From CSS I made use of Grid and Flexbox to make the website responsive. To help the making process easier
+                        I used codepen to divide the website and do one section at a time. I also used icons from <a href="https://fontawesome.com/">
+                            fontawesome.</a> Link to
+                        <a href="https://github.com/joseyx/portafolio">github repo</a>
+                    <h4>Technologies used include:</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <img src="images/portafolio-website.png" alt="Portafolio image" />
+            </article>
+        </section>
+    </div>
+    <div class="gradient"></div>
+    <div class="contact-section">
+        <section id="contact">
+            <h2>Contact me</h2>
+
+            <p class="contact-text">I'm always interested in hearing about new jobs or projects ideas so feel free to contact me.</p>
+
+            <p><a href="Pages/Form.html" class="button">Email me</a></p>
+        </section>
+    </div>
+{% endblock %}

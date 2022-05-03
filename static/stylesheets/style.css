@@ -1,0 +1,324 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --eclipse: #3D3D3D;
+    --limerick: #84B026;
+    --hotlimerick:#9FD232;
+    --elm: #217373;
+    --persianBlue:#34B7B7;
+    --blueWhale: #173540;
+    --midnight: #161F30;
+    --black: #171321;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --serif: 'IBM Plex Serif', serif;/* this is equivalent to mono */
+    --sans: 'IBM Plex Sans', sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--sans);
+    background-color:var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+
+h1,h2,h3 {
+    margin: 0;
+}
+
+a{
+    color: var(--limerick)
+}
+
+a:hover{
+    color: var(--hotlimerick);
+    text-decoration:none;
+}
+
+img{
+    width: 100%;
+}
+/* section styles */
+.gradient{
+    background: rgb(52,183,183);
+    background: linear-gradient(90deg, rgba(52,183,183,1) 0%, rgba(159,210,50,1) 100%);
+    height:2px;
+}
+
+.contact-section{
+    background-color:var(--blueWhale);
+}
+
+.section-eclipse{
+    background-color:var(--eclipse);
+}
+/* intro styles */
+#intro {
+    padding: 4rem 1rem 10rem 1rem;
+    margin: 0 auto;
+    max-width:1200px;
+}
+
+#intro p{
+    font-size:1rem;
+    line-height:1.5;
+}
+#intro .name{
+    font-family:var(--serif);
+}
+
+.name span{
+    font-family:var(--sans);
+    font-size:4rem;
+    color:var(--persianBlue);
+    display:block;
+}
+
+#intro h2 {
+    font-size:4rem;
+    font-weight: normal;
+}
+
+/* contact style */
+#contact{
+    width:400px;
+    text-align:center;
+    padding:3rem 0;
+    margin:0 auto;
+}
+
+#contact p:last-child{
+    margin-top:3rem;
+}
+
+
+
+/* nav bar */
+
+nav {
+    font-family: var(--serif);
+    font-size:80%;
+    padding: 4rem 1rem;
+}
+
+nav h1 a{
+    font-size:var(--sans);
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items:center;
+    gap:2rem;
+}
+
+nav li:first-child{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*="fa-"]{
+    font-size:150%;
+    color: var(--persianBlue);
+}
+
+nav [class*="fa-"]:hover{
+    color: var(--hotlimerick);
+}
+
+nav h1 [class*="fa-"]{
+    font-size:100%;
+}
+
+nav a{
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover{
+    color: var(--hotlimerick);
+}
+
+.button{
+    background-color:var(--persianBlue);
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: #12121C;
+    font-family: var(--serif);
+    text-decoration: none;
+}
+
+.button:hover{
+    color: var(--white);
+    background-color: var(--elm);
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 4rem;
+}
+
+footer ul {
+    list-style: none;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size:3rem;
+    margin: 2rem 0;
+}
+
+/* projects section */
+
+#about,#projects {
+    padding: 4rem 1rem;
+}
+
+#about h2,#projects h2 {
+    font-size:2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+
+#about h3,#projects h3 {
+    color:var(--persianBlue);
+}
+
+#about h4,#projects h4 {
+    font-size:1rem;
+    font-family: var(--serif);
+    margin: 0;
+}
+
+.blackbox{
+    background-color:var(--black);
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--white);
+    font-size:1rem;
+    line-height: 1.5;
+}
+
+#about ul,#projects ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+#about img, #projects img{
+    margin:2rem 0 4rem 0;
+    border-left: 1px solid var(--persianBlue);
+    border-top: 1px solid var(--persianBlue);
+    border-radius: 25px;
+    padding:1rem;
+}
+
+#about img{
+    width:100%;
+    height: 70%;
+}
+
+/* form styles */
+
+.form{
+    width:400px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.Form-input{
+    padding: 1rem 0;
+}
+
+.form label{
+    display: block;
+}
+
+.form textarea{
+    resize: none;
+}
+
+.form input, .form textarea{
+    width:80%;
+}
+
+
+@media (min-width:800px) {
+    #about, #projects{
+        max-width:1200px;
+        margin:0 auto;
+    }
+
+    article{
+        display:grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1rem;
+    }
+    #projects img, #about img{
+        grid-column:1/6;
+        grid-row:1/2;
+    }
+
+    .text{
+        grid-column:5/11;
+        grid-row:1/2;
+        order: 2;
+        text-align: right;
+    }
+
+    #about ul,#projects ul{
+        justify-content: flex-end;
+    }
+
+    .alt .text{
+        grid-column:1/7;
+        grid-row:1/2;
+        order: 1;
+        text-align:left;
+    }
+
+    #projects .alt img{
+        grid-column:6/11;
+        grid-row:1/2;
+    }
+
+    #projects .alt ul{
+        justify-content:flex-start;
+    }
+
+}
+
+@media (min-width:850px) {
+    nav {
+        max-width:1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child{
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
