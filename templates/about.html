@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+{% block navbar %}
+    <li><h1><a href="{{ url_for('landing_page') }}"><i class="fa-solid fa-laptop-code"></i> Jose Rojas</a></h1></li>
+    <li><a href="{{ url_for('landing_page', _anchor='projects') }}">Projects</a></li>
+    <li><a href="{{ url_for('landing_page', _anchor='contact') }}">Contact</a></li>
+    <li><a href="#">About</a></li>
+{% endblock %}
 {% block content %}
     <div class="gradient"></div>
     <div class="section-eclipse">
