@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+{% block content %}
+        <div class="gradient"></div>
+    <div class="section-eclipse">
+            <form action="https://formsubmit.co/joseyx041199@gmail.com" method="POST" class="form">
+                <div class="Form-input">
+                    <label for="input-name">Complete Name:</label>
+                    <input id="input-name" type="text" name="name" required>
+                </div>
+                <div class="Form-input">
+                    <label for="input-email">Email Address:</label>
+                    <input id="input-email" type="email" name="email" required>
+                </div>
+                <div class="Form-input">
+                    <label for="input-text">Message:</label>
+                    <textarea id="input-text" name="message"
+                              rows="5" required></textarea>
+                </div>
+                <button class="button" type="submit">Submit</button>
+            </form>
+    </div>
+{% endblock %}
